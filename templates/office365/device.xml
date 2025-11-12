@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+  <device>
+    <presentationURL>http://{{ local_ip }}:{{ local_port }}/ssdp/{{ template_idx }}/present.html</presentationURL>
+    <deviceType>urn:schemas-upnp-org:device:Basic:1</deviceType>
+    <friendlyName>Office365 Backups</friendlyName>
+    <manufacturer>MS Office</manufacturer>
+    <modelName>Office 365 Backup</modelName>
+    <UDN>{{ session_usn }}</UDN>
+  </device>
+</root>
