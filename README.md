@@ -30,7 +30,7 @@ netifaces
 ### Setup
 
 ```bash
-git clone <repository>
+git clone https://github.com/CobblePot59/flask-evil-ssdp.git
 cd flask-evil-ssdp
 pip install -r requirements.txt
 ```
