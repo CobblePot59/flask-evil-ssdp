@@ -1,4 +1,4 @@
-# Flask Evil SSDP - Multi-Template UPnP Spoofing Server
+# Flask Evil SSDP
 
 A sophisticated multi-template UPnP (Universal Plug and Play) spoofing framework designed for network penetration testing and security research. This tool leverages SSDP (Simple Service Discovery Protocol) to impersonate legitimate network devices and capture credentials through convincing phishing pages.
 
