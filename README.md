@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ### Basic Example
 
 ```bash
-sudo python3 main.py eth0 -t scanner -p 8888
+sudo python3 app.py eth0 -t scanner -p 8888
 ```
 
 ### Parameters
