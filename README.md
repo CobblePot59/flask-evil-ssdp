@@ -61,19 +61,19 @@ sudo python3 app.py eth0 -t scanner -p 8888
 
 ```bash
 # Run all templates on interface eth0
-sudo python3 main.py eth0 -t all -p 8888
+sudo python3 app.py eth0 -t all -p 8888
 
 # Run specific templates with custom redirects
-sudo python3 main.py eth0 -t scanner printer -u "http://attacker.com/1" "http://attacker.com/2"
+sudo python3 app.py eth0 -t scanner printer -u "http://attacker.com/1" "http://attacker.com/2"
 
 # Analyze mode - only listen, don't respond
-sudo python3 main.py eth0 -t scanner -a
+sudo python3 app.py eth0 -t scanner -a
 
 # Specify SMB server for embedded resources
-sudo python3 main.py eth0 -t scanner -s 192.168.1.50
+sudo python3 app.py eth0 -t scanner -s 192.168.1.50
 
 # List available templates
-python3 main.py -L
+python3 app.py -L
 ```
 
 ---
